@@ -1,4 +1,4 @@
-package com.iesdoctorbalmis.spring.model;
+package com.iesdoctorbalmis.spring.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
