@@ -30,7 +30,7 @@ public class Libros {
     private String isbn;
 
     @Column(nullable = false, length = 60)
-    private String titutlo;
+    private String titulo;
 
     @Column(length = 30)
     private String observaciones;
