@@ -21,7 +21,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Aquí van las filas de cada Alumno -->
+                    <tr th:each="alumno : ${alumnos}">
+                        <td style="text-align: center;" th:text="${alumno.id}"></td>
+                        <td th:text="${alumno.apellido1}"></td>
+                        <td th:text="${alumno.apellido2}"></td>
+                        <td th:text="${alumno.nombre}"></td>
+                        <td>
+                            <span class="badge" th:classappend="${alumno.tipoAlumno.name() == 'X' 
+                                                    ? 'bg-success' 
+                                                    : (alumno.tipoAlumno.name() == 'B' 
+                                                        ? 'bg-danger' 
+                                                        : (alumno.tipoAlumno.name() == 'M' 
+                                                            ? 'bg-warning text-dark' 
+                                                            : 'bg-secondary'))}"
+                                th:text="${alumno.tipoAlumno.descripcion}">
+                            </span>
+                        </td>
+                        <td th:text="${alumno.curso}"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>

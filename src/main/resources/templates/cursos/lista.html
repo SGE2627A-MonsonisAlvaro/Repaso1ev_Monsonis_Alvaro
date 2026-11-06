@@ -20,7 +20,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Aquí van las filas de cada Curso -->
+                    <tr th:each="curso : ${cursos}">
+                        <td style="text-align: center;" th:text="${curso.id}"></td>
+                        <td th:text="${curso.curso}"></td>
+                        <td th:text="${curso.descripcion}"></td>
+                        <td style="text-align: center;" th:text="${curso.numGrupos}"></td>
+                        <td style="text-align: center;" th:text="${curso.numAlumnos}"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>

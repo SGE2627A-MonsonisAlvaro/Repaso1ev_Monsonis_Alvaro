@@ -1,15 +1,26 @@
 package com.iesdoctorbalmis.spring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.iesdoctorbalmis.spring.repository.LibrosRepository;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @RequestMapping("libros")
 public class LibrosController {
 
+    private final LibrosRepository librosRepository;
+
+    public LibrosController(LibrosRepository repo) {
+        librosRepository = repo;
+    }
+
     @GetMapping
-    public String lista() {
+    public String lista(Model model) {
+        model.addAttribute("libros", librosRepository.findAll());
         return "libros/lista";
     }
 

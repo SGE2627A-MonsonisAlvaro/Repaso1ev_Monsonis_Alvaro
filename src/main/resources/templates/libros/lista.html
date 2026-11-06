@@ -22,7 +22,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Aquí van las filas de cada Libro -->
+                    <tr th:each="libro : ${libros}">
+                        <td style="text-align: center;" th:text="${libro.id}"></td>
+                        <td th:text="${libro.curso}"></td>
+                        <td th:text="${libro.area}"></td>
+                        <td th:text="${libro.isbn}"></td>
+                        <td th:text="${libro.titulo}"></td>
+                        <td th:text="${libro.observaciones}"></td>
+                        <td style="text-align: center;" th:text="${libro.cantidad}"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
