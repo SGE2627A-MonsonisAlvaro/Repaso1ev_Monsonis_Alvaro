@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{fragments/layout :: layout(~{::title}, ~{::main-content})}">
+
+<head>
+    <title>Cursos — Xarxallibres</title>
+</head>
+
+<body>
+    <th:block th:fragment="main-content">
+        <div class="table-responsive rounded-3 shadow-sm">
+            <table class="table table-hover xarxa-table mb-0" id="miTabla">
+                <thead>
+                    <tr>
+                        <th style="text-align: center; width: 6%;">Id</th>
+                        <th style="width: 20%;">Curso</th>
+                        <th style="width: 36%;">Descripción</th>
+                        <th style="width: 15%; text-align: center;">Num. Grupos</th>
+                        <th style="width: 15%; text-align: center;">Num. Alumnos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí van las filas de cada Curso -->
+                </tbody>
+            </table>
+        </div>
+    </th:block>
+</body>
+
+</html>

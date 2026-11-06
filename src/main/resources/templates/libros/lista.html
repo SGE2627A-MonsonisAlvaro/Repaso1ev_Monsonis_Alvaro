@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{fragments/layout :: layout(~{::title}, ~{::main-content})}">
+
+<head>
+    <title>Libros — Xarxallibres</title>
+</head>
+
+<body>
+    <th:block th:fragment="main-content">
+        <div class="table-responsive rounded-3 shadow-sm">
+            <table class="table table-hover xarxa-table mb-0" id="miTabla">
+                <thead>
+                    <tr>
+                        <th style="text-align: center; width: 6%;">Id</th>
+                        <th style="width: 10%;">Curso</th>
+                        <th style="width: 20%;">Área</th>
+                        <th style="width: 14%;">ISBN</th>
+                        <th style="width: 25%;">Título</th>
+                        <th style="width: 15%;">Observaciones</th>
+                        <th style="text-align: center; width: 10%;">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí van las filas de cada Libro -->
+                </tbody>
+            </table>
+        </div>
+    </th:block>
+</body>
+
+</html>
