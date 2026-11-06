@@ -8,6 +8,18 @@
 
 <body>
     <th:block th:fragment="main-content">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <nav aria-label="breadcrumb" class="xarxa-breadcrumb h4 mb-0">
+                <ol class="breadcrumb mb-1">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Libros</li>
+                </ol>
+            </nav>
+            <div class="d-flex gap-2">
+                <input class="form-control form-control-sm" type="search" placeholder="Buscar libro…" />
+                <button class="btn btn-primary btn-sm"> Nuevo</button>
+            </div>
+        </div>
         <div class="table-responsive rounded-3 shadow-sm">
             <table class="table table-hover xarxa-table mb-0" id="miTabla">
                 <thead>
