@@ -23,11 +23,11 @@ public class HomeController {
 
     @GetMapping("/")
     public String getMethodName(Model model) {
+        model.addAttribute("libros", librosRepository.findAll());
         model.addAttribute("totalAlumnos", alumnosRepository.count());
         model.addAttribute("totalCursos", cursosRepository.count());
         model.addAttribute("totalLibros", librosRepository.count());
 
         return "index";
     }
-
 }
