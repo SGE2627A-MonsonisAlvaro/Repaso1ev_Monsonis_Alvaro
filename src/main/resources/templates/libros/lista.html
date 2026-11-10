@@ -44,8 +44,28 @@
                         <td style="text-align: center;" th:text="${libro.cantidad}"></td>
                     </tr>
                 </tbody>
+                <tfoot style="--bs-table-bg: var(--xarxa-green-light)">
+                    <tr>
+                        <td colspan="100%" class="py-2">
+                            <!-- Componente de Paginación de Bootstrap -->
+                            <nav aria-label="Paginación de la tabla">
+                                <ul class="pagination  mb-0 justify-content-center" id="paginacion">
+                                    <!-- Los botones se generarán dinámicamente con JavaScript -->
+                                </ul>
+                            </nav>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
+        <script src="paginacion.js"></script>
+        <script>
+            // Asegúrate de que el DOM esté listo
+            document.addEventListener('DOMContentLoaded', function () {
+                // Puedes cambiar el último número para ajustar las filas por página de este HTML
+                inicializarPaginacion('miTabla', 'paginacion', 10);
+            });
+        </script>
     </th:block>
 </body>
 
